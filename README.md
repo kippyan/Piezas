@@ -1,3 +1,5 @@
+<img src="https://travis-ci.org/kippyan/Piezas.svg?branch=master" alt="build:"> 
+
 # Piezas
 
 ## Associated Enumerated Types
