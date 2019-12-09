@@ -1,5 +1,4 @@
-<img src="https://travis-ci.org/kippyan/Piezas.svg?branch=master" alt="build:"> 
-
+<img src="https://travis-ci.org/kippyan/Piezas.svg?branch=master" alt="build:"> <img class="notice-badge" src="https://coveralls.io/repos/github/kippyan/Piezas/badge.svg?branch=master" alt="Badge"> 
 # Piezas
 
 ## Associated Enumerated Types
