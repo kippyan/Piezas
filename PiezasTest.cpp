@@ -14,17 +14,14 @@ class PiezasTest : public ::testing::Test
 		virtual void TearDown(){} //clean up after each test, (before destructor) 
 };
 
-TEST(PiezasTest, sanityCheck)
-{
-	ASSERT_TRUE(true);
+TEST(PiezasTest, toggleTurn){
+  Piezas p;
+  ASSERT_TRUE(p.toggleTurn() == O);
 }
 
-TEST(PiezasTest, initialize)
+TEST(PiezasTest, pieceAtHappy)
 {
-  for(int i = 0; i < BOARD_ROWS; i++){
-    for(int j = 0; j < BOARD_COLS; j++){
-      ASSERT_TRUE(board[i][j] == Blank);
-    }
-  }
-  ASSERT_TRUE(turn == X);
+  Piezas p;
+    ASSERT_TRUE(p.pieceAt(0, 0) == Blank);
 }
+
