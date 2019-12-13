@@ -102,7 +102,7 @@ TEST(PiezasTest, vertWinX)
   p.dropPiece(0);
   p.dropPiece(1);
   p.dropPiece(0);
-  ASSERT_TRUE(p.gameState() == X)
+  ASSERT_TRUE(p.gameState() == X);
 }
 TEST(PiezasTest, vertWinO)
 {
@@ -111,7 +111,7 @@ TEST(PiezasTest, vertWinO)
   p.dropPiece(0);
   p.dropPiece(2);
   p.dropPiece(0);
-  ASSERT_TRUE(p.gameState() == O)
+  ASSERT_TRUE(p.gameState() == O);
 }
 TEST(PiezasTest, hozWinX)
 {
@@ -121,15 +121,16 @@ TEST(PiezasTest, hozWinX)
   p.dropPiece(1);
   p.dropPiece(1);
   p.dropPiece(2);
-  ASSERT_TRUE(p.gameState() == X)
+  ASSERT_TRUE(p.gameState() == X);
 }
 TEST(PiezasTest, hozWinO)
 {
   Piezas p;
+  p.dropPiece(1);
   p.dropPiece(0);
+  p.dropPiece(3);
   p.dropPiece(0);
   p.dropPiece(1);
   p.dropPiece(0);
-  p.dropPiece(2);
-  ASSERT_TRUE(p.gameState() == X)
+  ASSERT_TRUE(p.gameState() == O);
 }
