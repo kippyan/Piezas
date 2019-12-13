@@ -56,22 +56,22 @@ TEST(PiezasTest, pieceAtAboveY)
 TEST(PiezasTest, place1Piece)
 {
   Piezas p;
-  p.placePiece(0);
+  p.dropPiece(0);
   ASSERT_TRUE(p.pieceAt(0, 0) == X);
 }
 TEST(PiezasTest, place2Piece)
 {
   Piezas p;
-  p.placePiece(3);
-  p.placePiece(3);
+  p.dropPiece(3);
+  p.dropPiece(3);
   ASSERT_TRUE(p.pieceAt(1, 3) == O);
 }
 TEST(PiezasTest, place3Piece)
 {
   Piezas p;
-  p.placePiece(1);
-  p.placePiece(1);
-  p.placePiece(1);
+  p.dropPiece(1);
+  p.dropPiece(1);
+  p.dropPiece(1);
   ASSERT_TRUE(p.pieceAt(2, 1) == O);
 }
 
