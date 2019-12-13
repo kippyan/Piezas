@@ -72,6 +72,10 @@ class Piezas
      * line, it is a tie.
     **/
   	Piece gameState();
+
+    //helper functions
+    Piece toggleTurn();
+    void checkPiece(const int i, const int j, int& cur_x, int& max_x, int& cur_o, int& max_o);
 };
 
 #endif /*_PIEZAS_H_*/
