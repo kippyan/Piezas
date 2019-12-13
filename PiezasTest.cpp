@@ -50,7 +50,7 @@ TEST(PiezasTest, pieceAtBelowY)
 TEST(PiezasTest, pieceAtAboveY)
 {
   Piezas p;
-  ASSERT_TRUE(p.pieceAt(0, 3) == Invalid);
+  ASSERT_TRUE(p.pieceAt(0, 4) == Invalid);
 }
 
 TEST(PiezasTest, place1Piece)
