@@ -22,6 +22,6 @@ TEST(PiezasTest, toggleTurn){
 TEST(PiezasTest, pieceAtHappy)
 {
   Piezas p;
-    ASSERT_TRUE(p.pieceAt(0, 0) == Blank);
+  ASSERT_TRUE(p.pieceAt(0, 0) == Blank);
 }
 
