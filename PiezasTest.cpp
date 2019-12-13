@@ -14,7 +14,8 @@ class PiezasTest : public ::testing::Test
 		virtual void TearDown(){} //clean up after each test, (before destructor) 
 };
 
-TEST(PiezasTest, toggleTurn){
+TEST(PiezasTest, toggleTurn)
+{
   Piezas p;
   ASSERT_TRUE(p.toggleTurn() == O);
 }

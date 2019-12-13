@@ -130,7 +130,10 @@ void Piezas::checkPiece(const int i, const int j, int& cur_x, int& max_x, int& c
 Piece Piezas::toggleTurn()
 {
   if(turn == X)
-    return turn = O;
-  if(turn == O)
-    return turn = X;
+    turn = O;
+  else if(turn == O)
+    turn = X;
+  else
+    turn = Invalid;
+  return turn;
 }
