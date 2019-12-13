@@ -18,3 +18,13 @@ TEST(PiezasTest, sanityCheck)
 {
 	ASSERT_TRUE(true);
 }
+
+TEST(PiezasTest, initialize)
+{
+  for(int i = 0; i < BOARD_ROWS; i++){
+    for(int j = 0; j < BOARD_COLS; j++){
+      ASSERT_TRUE(board[i][j] == Blank);
+    }
+  }
+  ASSERT_TRUE(turn == X);
+}
