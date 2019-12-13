@@ -72,6 +72,6 @@ TEST(PiezasTest, place3Piece)
   p.dropPiece(1);
   p.dropPiece(1);
   p.dropPiece(1);
-  ASSERT_TRUE(p.pieceAt(2, 1) == O);
+  ASSERT_TRUE(p.pieceAt(2, 1) == X);
 }
 
