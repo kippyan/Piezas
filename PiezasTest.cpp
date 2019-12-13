@@ -75,3 +75,11 @@ TEST(PiezasTest, place3Piece)
   ASSERT_TRUE(p.pieceAt(2, 1) == X);
 }
 
+TEST(PiezasTest, placeReset)
+{
+  Piezas p;
+  p.dropPiece(0);
+  p.reset();
+  ASSERT_TRUE(p.pieceAt(0, 0) == Blank);
+}
+
