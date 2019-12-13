@@ -87,7 +87,7 @@ Piece Piezas::gameState()
   Piece prev_piece = Invalid;
   for(unsigned int i = 0; i < BOARD_ROWS; i++){
     for(unsigned int j = 0; j < BOARD_COLS; j++){
-      checkPiece(i, j, cur_x_streak, max_x_streak, cur_o_streak, max_o_streak);
+      checkPiece(i, j, cur_x_streak, max_x_streak, cur_o_streak, max_o_streak, prev_piece);
     }
     cur_x_streak = 0;
     cur_o_streak = 0;
@@ -95,7 +95,7 @@ Piece Piezas::gameState()
   }
   for(unsigned int j = 0; j < BOARD_COLS; j++){
     for(unsigned int i = 0; i < BOARD_ROWS; i++){
-      checkPiece(i, j, cur_x_streak, max_x_streak, cur_o_streak, max_o_streak);
+      checkPiece(i, j, cur_x_streak, max_x_streak, cur_o_streak, max_o_streak, prev_piece);
     }
     cur_x_streak = 0;
     cur_o_streak = 0;
@@ -107,7 +107,7 @@ Piece Piezas::gameState()
     return O;
   return Blank;
 }
-void Piezas::checkPiece(const int i, const int j, int& cur_x, int& max_x, int& cur_o, int& max_o){
+void Piezas::checkPiece(const int i, const int j, int& cur_x, int& max_x, int& cur_o, int& max_o, Piece& prev_piece){
   if(board[i][j] == X){
     cur_x++;
     max_x = cur_x > max_x ? cur_x : max_x;

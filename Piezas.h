@@ -75,7 +75,7 @@ class Piezas
 
     //helper functions
     Piece toggleTurn();
-    void checkPiece(const int i, const int j, int& cur_x, int& max_x, int& cur_o, int& max_o);
+    void checkPiece(const int i, const int j, int& cur_x, int& max_x, int& cur_o, int& max_o, Piece& prev_piece);
 };
 
 #endif /*_PIEZAS_H_*/
