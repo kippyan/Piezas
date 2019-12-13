@@ -83,3 +83,53 @@ TEST(PiezasTest, placeReset)
   ASSERT_TRUE(p.pieceAt(0, 0) == Blank);
 }
 
+TEST(PiezasTest, emptyTie)
+{
+  Piezas p;
+  ASSERT_TRUE(p.boardState = Blank);
+}
+TEST(PiezasTest, fullTie)
+{
+  Piezas P;
+  ASSERT_TRUE(p.boardState == Blank);
+}
+
+TEST(PiezasTest, vertWinX)
+{
+  Piezas p;
+  p.dropPiece(0);
+  p.dropPiece(1);
+  p.dropPiece(0);
+  p.dropPiece(1);
+  p.dropPiece(0);
+  ASSERT_TRUE(p.boardState == X)
+}
+TEST(PiezasTest, vertWinO)
+{
+  Piezas p;
+  p.dropPiece(1);
+  p.dropPiece(0);
+  p.dropPiece(2);
+  p.dropPiece(0);
+  ASSERT_TRUE(p.boardState == O)
+}
+TEST(PiezasTest, hozWinX)
+{
+  Piezas p;
+  p.dropPiece(0);
+  p.dropPiece(0);
+  p.dropPiece(1);
+  p.dropPiece(1);
+  p.dropPiece(2);
+  ASSERT_TRUE(p.boardState == X)
+}
+TEST(PiezasTest, hozWinO)
+{
+  Piezas p;
+  p.dropPiece(0);
+  p.dropPiece(0);
+  p.dropPiece(1);
+  p.dropPiece(0);
+  p.dropPiece(2);
+  ASSERT_TRUE(p.boardState == X)
+}
