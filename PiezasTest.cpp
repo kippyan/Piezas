@@ -86,11 +86,11 @@ TEST(PiezasTest, placeReset)
 TEST(PiezasTest, emptyTie)
 {
   Piezas p;
-  ASSERT_TRUE(p.gameState() = Blank);
+  ASSERT_TRUE(p.gameState() == Blank);
 }
 TEST(PiezasTest, fullTie)
 {
-  Piezas P;
+  Piezas p;
   ASSERT_TRUE(p.gameState() == Blank);
 }
 
