@@ -86,12 +86,12 @@ TEST(PiezasTest, placeReset)
 TEST(PiezasTest, emptyTie)
 {
   Piezas p;
-  ASSERT_TRUE(p.boardState = Blank);
+  ASSERT_TRUE(p.gameState() = Blank);
 }
 TEST(PiezasTest, fullTie)
 {
   Piezas P;
-  ASSERT_TRUE(p.boardState == Blank);
+  ASSERT_TRUE(p.gameState() == Blank);
 }
 
 TEST(PiezasTest, vertWinX)
@@ -102,7 +102,7 @@ TEST(PiezasTest, vertWinX)
   p.dropPiece(0);
   p.dropPiece(1);
   p.dropPiece(0);
-  ASSERT_TRUE(p.boardState == X)
+  ASSERT_TRUE(p.gameState() == X)
 }
 TEST(PiezasTest, vertWinO)
 {
@@ -111,7 +111,7 @@ TEST(PiezasTest, vertWinO)
   p.dropPiece(0);
   p.dropPiece(2);
   p.dropPiece(0);
-  ASSERT_TRUE(p.boardState == O)
+  ASSERT_TRUE(p.gameState() == O)
 }
 TEST(PiezasTest, hozWinX)
 {
@@ -121,7 +121,7 @@ TEST(PiezasTest, hozWinX)
   p.dropPiece(1);
   p.dropPiece(1);
   p.dropPiece(2);
-  ASSERT_TRUE(p.boardState == X)
+  ASSERT_TRUE(p.gameState() == X)
 }
 TEST(PiezasTest, hozWinO)
 {
@@ -131,5 +131,5 @@ TEST(PiezasTest, hozWinO)
   p.dropPiece(1);
   p.dropPiece(0);
   p.dropPiece(2);
-  ASSERT_TRUE(p.boardState == X)
+  ASSERT_TRUE(p.gameState() == X)
 }
