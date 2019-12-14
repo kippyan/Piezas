@@ -74,6 +74,14 @@ TEST(PiezasTest, place3Piece)
   p.dropPiece(1);
   ASSERT_TRUE(p.pieceAt(2, 1) == X);
 }
+TEST(PiezasTest, place4Piece)
+{
+  Piezas p;
+  p.dropPiece(1);
+  p.dropPiece(1);
+  p.dropPiece(1);
+  ASSERT_TRUE(p.dropPiece(1) == O);
+}
 
 TEST(PiezasTest, placeReset)
 {
@@ -137,3 +145,4 @@ TEST(PiezasTest, hozWinO)
   p.dropPiece(0);
   ASSERT_TRUE(p.gameState() == O);
 }
+
