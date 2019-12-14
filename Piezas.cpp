@@ -108,22 +108,18 @@ Piece Piezas::gameState()
   return Blank;
 }
 void Piezas::checkPiece(const int i, const int j, int& cur_x, int& max_x, int& cur_o, int& max_o, Piece& prev_piece){
+    prev_piece = board[i][j];
   if(board[i][j] == X){
     cur_x++;
+    cur_o = 0;
     max_x = cur_x > max_x ? cur_x : max_x;
-  }else{
+  }else if(board[i][j] == O){
     cur_o++;
+    cur_x = 0;
     max_o = cur_o > max_o ? cur_o : max_o;
-    prev_piece = board[i][j];
-    if(board[i][j] == X){
-      cur_x = 1;
-      cur_o = 0;
-      prev_piece = X;
-    }else{
-      cur_x = 0;
-      cur_o = 1;
-      prev_piece = O;
-    }
+  }else{
+    cur_x = 0;
+    cur_o = 0;
   }
 }
 

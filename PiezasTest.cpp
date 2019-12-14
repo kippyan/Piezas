@@ -91,6 +91,9 @@ TEST(PiezasTest, emptyTie)
 TEST(PiezasTest, fullTie)
 {
   Piezas p;
+  for(unsigned int i = 0; i < NUM_COLS; i++)
+    for(unsigned int j = 0; j < NUM_ROWS; j++)
+      p.dropPiece(j);
   ASSERT_TRUE(p.gameState() == Blank);
 }
 
