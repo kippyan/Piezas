@@ -96,6 +96,12 @@ TEST(PiezasTest, emptyTie)
   Piezas p;
   ASSERT_TRUE(p.gameState() == Blank);
 }
+TEST(PiezasTest, badTie)
+{
+  Piezas p;
+  Piece a = p.gameState();
+  ASSERT_TRUE(a == Blank);
+}
 TEST(PiezasTest, fullTie)
 {
   Piezas p;
