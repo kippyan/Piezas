@@ -110,7 +110,7 @@ TEST(PiezasTest, vertWinX)
 TEST(PiezasTest, vertWinO)
 {
   Piezas p;
-  p.dropPiece(1);
+  p.dropPiece(0);
   p.dropPiece(0);
   p.dropPiece(2);
   p.dropPiece(0);

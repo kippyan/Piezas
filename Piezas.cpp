@@ -129,7 +129,5 @@ Piece Piezas::toggleTurn()
     turn = O;
   else if(turn == O)
     turn = X;
-  else
-    turn = Invalid;
   return turn;
 }
